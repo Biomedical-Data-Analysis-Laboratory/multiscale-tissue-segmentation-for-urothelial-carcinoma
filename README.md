@@ -7,9 +7,24 @@ In pathology labs worldwide, we see an increasing number of tissue samples that 
 
 ![alt text](images/overview.png?raw=true)
 
-### Requirements
 
-The code was built using the following Python packages:
+
+### Code - Pre-Processing annotation mask
+
+The Python program in the Preprocessing folder is used to find all tiles within a region of interest (ROI) and save the coordinates in pickle files. These pickle files is then used to train the models in the 'tissue-segmentation-model' folder. The code is created to read XML files generated using Aperio ImageScope. Aperio ImageScope has a drawing tool which can be used to annotate ROIs in the WSI. Only one tissue type can be annotated in a WSI at a time. To annotate multiple tissue types in the same WSI, copy the WSI to create one version for each tissue type. 
+
+In the root directory of the preprocessing code, create a folder 'input/'. In this foler, create one folder for each tissue type to extract, e.g., 'input/Urothelium/' and 'input/Stroma/'. For each tissue folder, create a folder with the WSI name and place your WSI and XML file inside. 
+
+Requirements:
+
+python==3.6.7  
+pyvips==2.1.12  
+
+### Code - Train tissue segmentation models
+
+To run the main file, add the argument "True" or "False". "True" means you are starting a new model, and a new folder will be created. "False" means you are not starting a new model, and want to resume an existing model. If you have multiple models, use the variable CONTINUE_FROM_MODEL to specify which model to start from. By default, CONTINUE_FROM_MODEL is set to "last", which will resume the most recent model.
+
+Requirements:
 
 python==3.6.7  
 numpy==1.18.5  
