@@ -42,10 +42,10 @@ numpy==1.18.5
 scikit-image==0.17.2  
 pyvips==2.1.12  
 scipy==1.4.1  
-tensorflow 1.13.1  
-keras 2.2.4  
-matplotlib 3.1.0  
-PIL 6.0.0  
+tensorflow==1.13.1  
+keras==2.2.4  
+matplotlib==3.1.0  
+PIL==6.0.0  
 
 ### 3 - Link to paper
 https://journals.sagepub.com/doi/full/10.1177/1533033820946787
