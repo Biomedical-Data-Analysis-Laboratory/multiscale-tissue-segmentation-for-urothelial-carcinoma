@@ -51,6 +51,8 @@ PIL==6.0.0
 https://journals.sagepub.com/doi/full/10.1177/1533033820946787
 
 ## 4 - How to cite our work
+The code is released free of charge as open-source software under the GPL-3.0 License. Please cite our paper when you have used it in your study.
+
 Rune Wetteland, Kjersti Engan, Trygve Eftestøl, Vebjørn Kvikstad, and Emiel AM Janssen.
 ```
 @article{wetteland2020multiscale,
