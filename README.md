@@ -35,7 +35,16 @@ The five modes are:
 
 The code contain a large list of options. From the main file it is possible to choose which base model to use, freeze/unfreeze base model, dropout rate, number of neurons in the classifier layers, how many scales to use and which scales to use. There is a debug mode where only a small dataset is used. For data augmentation, it is possible to choose which tissue classes to augment, and how many times to augment the class. If the training is stopped due to e.g. a power outage, it is  possible to continue training from the last epoch, this also workes if training multiple models or cross-validation. It is possible to enter a list of hyperparameters, e.g. learning rate = [0.1, 0.01] dropout_rate = [0.1, 0.4], and the program will train all possible combinations of the hyperparameters. The program have the option to save learning curves, confusion matrices, classification reports, misclassified images and logs.
 
-Requirements:
+### 2.3 – Tissue model
+If you want to use the model from the paper, the best model (TRI-25x-100x-400x, frozen, multiclass) can be downloaded using the link below. The model is too large to be uploaded to Github, hence, the external download link.
+
+Download the model, and put the "Saved_data/" folders in the root folder of the code. The "Saved_data/" folder contains the model weights and necessary files to use the model.
+
+Link to model:
+
+https://www.ux.uis.no/filer/multiscale-tissue-segmentation-for-urothelial-carcinoma/
+
+## 3 - Requirements:
 
 python==3.6.7  
 numpy==1.18.5  
@@ -47,10 +56,10 @@ keras==2.2.4
 matplotlib==3.1.0  
 PIL==6.0.0  
 
-## 3 - Link to paper
+## 4 - Link to paper
 https://journals.sagepub.com/doi/full/10.1177/1533033820946787
 
-## 4 - How to cite our work
+## 5 - How to cite our work
 The code is released free of charge as open-source software under the GPL-3.0 License. Please cite our paper if you use it in your research.
 
 ```
